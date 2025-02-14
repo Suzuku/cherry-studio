@@ -41,40 +41,40 @@ import { MinAppType } from '@renderer/types'
 export const DEFAULT_MIN_APPS: MinAppType[] = [
   {
     id: 'openai',
-    name: 'ChatGPT',
-    url: 'https://chatgpt.com/',
+    name: '舆情综述',
+    url: 'http://127.0.0.1//workflow/tC7uRSQck13OsMlr',
     logo: OpenAiProviderLogo,
     bodered: true
   },
   {
     id: 'gemini',
-    name: 'Gemini',
-    url: 'https://gemini.google.com/',
+    name: '文件翻译',
+    url: 'http://127.0.0.1/chat/2dIMiR8KSu5qkoBN',
     logo: GeminiAppLogo
   },
   {
     id: 'silicon',
-    name: 'SiliconFlow',
-    url: 'https://cloud.siliconflow.cn/playground/chat',
+    name: '文本情感分析',
+    url: 'http://127.0.0.1/workflow/7C1s2ArJVgUQvEOw',
     logo: SiliconFlowProviderLogo
   },
   {
     id: 'deepseek',
-    name: 'DeepSeek',
-    url: 'https://chat.deepseek.com/',
+    name: '个极工作流',
+    url: 'http://127.0.0.1/workflow/ccBMPgnX5I7sXhoh',
     logo: DeepSeekProviderLogo
   },
   {
     id: 'yi',
-    name: '万知',
-    url: 'https://www.wanzhi.com/',
+    name: '语义识别',
+    url: 'http://127.0.0.1/chat/W0CqUhrCNOdM1bUj',
     logo: WanZhiAppLogo,
     bodered: true
   },
   {
     id: 'zhipu',
-    name: '智谱清言',
-    url: 'https://chatglm.cn/main/alltoolsdetail',
+    name: '总结网站内容',
+    url: 'http://127.0.0.1/workflow/B9Isr14POn5RJBzs',
     logo: ZhipuProviderLogo
   },
   {

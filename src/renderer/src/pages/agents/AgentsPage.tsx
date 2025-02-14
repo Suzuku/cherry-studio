@@ -36,8 +36,7 @@ const AgentsPage: FC = () => {
 
   const filteredAgentGroups = useMemo(() => {
     const groups: Record<string, Agent[]> = {
-      我的: [],
-      精选: agentGroups['精选'] || []
+      我的: []
     }
 
     if (!search.trim()) {

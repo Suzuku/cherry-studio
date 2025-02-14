@@ -2,10 +2,17 @@ import { DEFAULT_MIN_APPS } from '@renderer/config/minapps'
 import { RootState, useAppDispatch, useAppSelector } from '@renderer/store'
 import { setDisabledMinApps, setMinApps, setPinnedMinApps } from '@renderer/store/minapps'
 import { MinAppType } from '@renderer/types'
+import { useEffect } from 'react'
 
 export const useMinapps = () => {
   const { enabled, disabled, pinned } = useAppSelector((state: RootState) => state.minapps)
+  const enabledMiniappIdArr = ['deepseek', 'openai', 'gemini', 'silicon', 'yi', 'zhipu']
   const dispatch = useAppDispatch()
+
+  useEffect(() => {
+    dispatch(setMinApps(DEFAULT_MIN_APPS.filter((app) => enabledMiniappIdArr.includes(app.id))))
+    dispatch(setDisabledMinApps(DEFAULT_MIN_APPS.filter((app) => !enabledMiniappIdArr.includes(app.id))))
+  }, [dispatch])
 
   return {
     minapps: enabled.map((app) => DEFAULT_MIN_APPS.find((item) => item.id === app.id) || app),
